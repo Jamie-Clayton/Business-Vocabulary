@@ -1,6 +1,6 @@
 ﻿using Business.Vocabulary;
 
-namespace Examples.CustomRules
+namespace Examples.Vocabulary.CustomRules
 {
     public class OrderRequiredInformationRule : Rule<Order>
     {

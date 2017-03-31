@@ -1,4 +1,4 @@
-﻿namespace Examples
+﻿namespace Examples.Vocabulary
 {
     /// <summary>
     /// Business Rules can belong to groups to help filter validation to a subset of business rules.

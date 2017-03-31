@@ -1,9 +1,9 @@
 ﻿using Business.Vocabulary;
-using Examples.CustomRules;
+using Examples.Vocabulary.CustomRules;
 using System;
 using System.Linq;
 
-namespace Examples
+namespace Examples.Vocabulary
 {
     public class Order
     {

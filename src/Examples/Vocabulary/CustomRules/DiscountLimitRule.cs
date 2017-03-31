@@ -1,6 +1,6 @@
 ﻿using Business.Vocabulary;
 
-namespace Examples.CustomRules
+namespace Examples.Vocabulary.CustomRules
 {
     public class DiscountLimitRule : Rule<Order>
     {
@@ -11,13 +11,13 @@ namespace Examples.CustomRules
         public override RuleResult Check()
         {
             bool ruleIsValid = true;
-            string description = "";            
-            if (Context.Total < 200 )
+            string description = "";
+            if (Context.Total < 200)
             {
                 ruleIsValid = Context.DiscountPercent.Equals(0f);
                 description = "Discounts cannot be applied to orders under $200.";
             }
-                if (Context.Total > 200 & Context.Total <= 1000)
+            if (Context.Total > 200 & Context.Total <= 1000)
             {
                 ruleIsValid = Context.DiscountPercent <= .05;
                 description = $"Discount for order ${Context.Total} cannot be more than 5%";
@@ -27,7 +27,7 @@ namespace Examples.CustomRules
                 ruleIsValid = Context.DiscountPercent <= .2;
                 description = $"Discount for order ${Context.Total} cannot be more than 20%";
             }
-            
+
             return base.Check(ruleIsValid, description);
         }
     }
