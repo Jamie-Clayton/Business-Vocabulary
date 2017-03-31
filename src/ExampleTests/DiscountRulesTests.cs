@@ -1,7 +1,8 @@
-﻿using Examples.Vocabulary.CustomRules;
+﻿using Examples.Vocabulary;
+using Examples.Vocabulary.CustomRules;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Examples.Vocabulary
+namespace ExampleTests
 {
     [TestClass]
     public class DiscountRulesUnitTest

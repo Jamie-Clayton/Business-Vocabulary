@@ -22,7 +22,7 @@ namespace Examples.Validation
                 return failures.Count() == 1;
             }
         }
-        
+
         public void ApplyOrderDiscount(double total, double discountPercentToApplyToTotal)
         {
             this.Total = total;

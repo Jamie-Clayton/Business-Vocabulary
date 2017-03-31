@@ -7,7 +7,7 @@ namespace Examples.Vocabulary
 {
     public class Order
     {
-        
+
         public string CustomerName { get; set; }
         public DateTime OrderDate { get; set; }
         public double Total { get; set; }
@@ -25,7 +25,7 @@ namespace Examples.Vocabulary
 
         public void ApplyOrderDiscount(double total, double discountPercentToApplyToTotal)
         {
-           
+
             this.Total = total;
             this.DiscountPercent = discountPercentToApplyToTotal;
 
@@ -34,14 +34,14 @@ namespace Examples.Vocabulary
             if (rulesChecklist.Broken.Any())
             {
                 //  warn the user of broken business rule.
-                foreach(string explaination in rulesChecklist.Broken.Select(rule => rule.Description).ToList())
+                foreach (string explaination in rulesChecklist.Broken.Select(rule => rule.Description).ToList())
                 {
                     Console.WriteLine(explaination);
                 }
-                
+
                 //  Reset the discount for the order if the discount policy business rules fails.
                 this.DiscountPercent = 0;
-            }            
+            }
         }
 
         public void Create(string customerName, DateTime date)
@@ -57,7 +57,7 @@ namespace Examples.Vocabulary
             if (this.rulesChecklist.Broken.Any())
             {
                 //  Warn user why they can't save record.
-                
+
             }
             else
             {
